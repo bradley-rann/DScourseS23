@@ -1,0 +1,35 @@
+\documentclass{article}
+
+% Language setting
+% Replace `english' with e.g. `spanish' to change the document language
+\usepackage[english]{babel}
+
+% Set page size and margins
+% Replace `letterpaper' with `a4paper' for UK/EU standard size
+\usepackage[letterpaper,top=2cm,bottom=2cm,left=3cm,right=3cm,marginparwidth=1.75cm]{geometry}
+
+% Useful packages
+\usepackage{amsmath}
+\usepackage{graphicx}
+\usepackage[colorlinks=true, allcolors=blue]{hyperref}
+
+\title{PS1}
+\author{Bradley Rann}
+
+\begin{document}
+\maketitle
+
+
+\section{Brief Summary for PS1}
+
+\subsection{My interests} 
+My two biggest interests in the field of economics are development economics and health economics. I am in general much more interested in macro and its sub-fields than micro. I'm also interested in infrastructure, especially infrastructure and policy that is not car-dependent.
+\subsection{Why I'm taking the class!}I made my decision to take this class for two reasons. I've really liked the previous courses I've taken with you (even though econometrics was derailed by COVID) and the ability to conduct data science makes my future extremely flexible. I'm also trying to get more experience in coding and obtain better computer organizing and code practices.
+\subsection{Project ideas}I'm not sure what I'll do for my project yet, but I think I will gear it more towards health. I'm not sure what kind of health data I can look at to analyze so maybe it'll be more rendered towards sports medicine as injuries are public and well documented.
+\subsection{Post-graduation plans}After graduation I'm hoping to continue to medical school and from there conduct medical research while also being a practicing physician (and hopefully use my data science skills)!
+
+\section{Mathematics}
+$a^2+b^2=c^2$
+
+
+\end{document}
