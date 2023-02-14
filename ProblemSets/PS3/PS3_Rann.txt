@@ -1,0 +1,18 @@
+\documentclass{article}
+\usepackage{graphicx} % Required for inserting images
+
+\title{PS3}
+\author{Bradley Rann }
+\date{February 2023}
+
+\begin{document}
+
+\maketitle
+
+\section{Question 6}
+\begin{itemize}
+  \item The uncompressed file size was 5 MB
+  \item It had 36,634 lines
+  \item There were 5 lines because we were pulling the head -5 of the file
+\end{itemize}
+\end{document}
