@@ -1,0 +1,59 @@
+\documentclass{article}
+\usepackage{graphicx} % Required for inserting images
+
+\title{PS8}
+\author{Bradley Rann }
+\date{April 2023}
+
+\begin{document}
+
+\maketitle
+
+\section{Introduction}
+
+5.) The data seems to be pretty close to the true beta numbers that we had in (1) depending on how close your measure would be. It overshot the estimate though.
+7.) Yes they are different, but only slightly, it looks like the Nelder-Mead was better in the tens or hundreds of thousandths place.
+9.) \begin{center}
+\begin{tabular}{lclc}
+\toprule
+\textbf{Dep. Variable:}    &        y         & \textbf{  R-squared:         } &     1.000   \\
+\textbf{Model:}            &       OLS        & \textbf{  Adj. R-squared:    } &     1.000   \\
+\textbf{Method:}           &  Least Squares   & \textbf{  F-statistic:       } & 5.216e+07   \\
+\textbf{Date:}             & Tue, 04 Apr 2023 & \textbf{  Prob (F-statistic):} &     0.00    \\
+\textbf{Time:}             &     12:30:52     & \textbf{  Log-Likelihood:    } & 1.2102e+05  \\
+\textbf{No. Observations:} &      100000      & \textbf{  AIC:               } & -2.420e+05  \\
+\textbf{Df Residuals:}     &       99990      & \textbf{  BIC:               } & -2.419e+05  \\
+\textbf{Df Model:}         &           9      & \textbf{                     } &             \\
+\textbf{Covariance Type:}  &    nonrobust     & \textbf{                     } &             \\
+\bottomrule
+\end{tabular}
+\begin{tabular}{lcccccc}
+               & \textbf{coef} & \textbf{std err} & \textbf{t} & \textbf{P$> |$t$|$} & \textbf{[0.025} & \textbf{0.975]}  \\
+\midrule
+\textbf{const} &       1.6250  &        0.000     &  7122.372  &         0.000        &        1.625    &        1.625     \\
+\textbf{x1}    &      -1.0001  &        0.000     & -4382.439  &         0.000        &       -1.001    &       -1.000     \\
+\textbf{x2}    &      -0.2498  &        0.000     & -1098.996  &         0.000        &       -0.250    &       -0.249     \\
+\textbf{x3}    &       0.7503  &        0.000     &  3283.581  &         0.000        &        0.750    &        0.751     \\
+\textbf{x4}    &       3.5003  &        0.000     &  1.53e+04  &         0.000        &        3.500    &        3.501     \\
+\textbf{x5}    &      -1.9999  &        0.000     & -8756.644  &         0.000        &       -2.000    &       -1.999     \\
+\textbf{x6}    &       0.5001  &        0.000     &  2186.605  &         0.000        &        0.500    &        0.501     \\
+\textbf{x7}    &       1.0004  &        0.000     &  4375.254  &         0.000        &        1.000    &        1.001     \\
+\textbf{x8}    &       1.2501  &        0.000     &  5493.186  &         0.000        &        1.250    &        1.251     \\
+\textbf{x9}    &       2.0000  &        0.000     &  8775.692  &         0.000        &        2.000    &        2.000     \\
+\bottomrule
+\end{tabular}
+\begin{tabular}{lclc}
+\textbf{Omnibus:}       & 85278.853 & \textbf{  Durbin-Watson:     } &    2.000  \\
+\textbf{Prob(Omnibus):} &    0.000  & \textbf{  Jarque-Bera (JB):  } & 5957.972  \\
+\textbf{Skew:}          &    0.002  & \textbf{  Prob(JB):          } &     0.00  \\
+\textbf{Kurtosis:}      &    1.804  & \textbf{  Cond. No.          } &     1.02  \\
+\bottomrule
+\end{tabular}
+%\caption{OLS Regression Results}
+\end{center}
+
+Notes: \newline
+ [1] Standard Errors assume that the covariance matrix of the errors is correctly specified.
+
+
+\end{document}
