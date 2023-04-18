@@ -1,0 +1,52 @@
+\documentclass{article}
+\usepackage{graphicx} % Required for inserting images
+\usepackage{tabularx}
+\usepackage{booktabs}
+
+\title{PS10}
+\author{Bradley Rann }
+\date{April 2023}
+
+\begin{document}
+
+\maketitle
+
+\section{Introduction}
+
+Below in the table that I've provided we can compare the different tribes on the data set. It seems that performance wise hat SVM and the Tree methods worked the best out of sample, and the nearest neighbor and neural net performed the worst. 
+
+\begin{table}
+\centering
+\begin{tabular}{rrllrrrrl}
+\toprule
+penalty & .metric & .estimator & mean & n & std\_err & .estimate & alg & cost\_complexity \\
+\midrule
+0 & accuracy & binary & 0.8456697 & 3 & 0.0020430 & 0.8526025 & logit & NA \\
+NA & accuracy & binary & 0.8592215 & 3 & 0.0011285 & 0.8526025 & tree & 0.001 \\
+1 & accuracy & binary & 0.8444409 & 3 & 0.0018916 & 0.8526025 & neural & NA \\
+NA & accuracy & binary & 0.8366480 & 3 & 0.0029768 & 0.8526025 & neighbor & NA \\
+NA & accuracy & binary & 0.8508523 & 2 & 0.0005759 & 0.8526025 & svm & NA \\
+\bottomrule
+\end{tabular}
+\caption{PS10 - Part 1}
+\end{table}
+
+\begin{table}
+\centering
+\begin{tabular}{rrrrrr}
+\toprule
+tree\_depth & min\_n & hidden\_units & neighbors & cost & rbf\_sigma \\
+\midrule
+NA & NA & NA & NA & NA & NA \\
+15 & 10 & NA & NA & NA & NA \\
+NA & NA & 1 & NA & NA & NA \\
+NA & NA & NA & 30 & NA & NA \\
+NA & NA & NA & NA & 2 & 0.25 \\
+\bottomrule
+\end{tabular}
+\caption{PS10 - Part 2}
+\end{table}
+
+
+
+\end{document}
