@@ -1,0 +1,115 @@
+\documentclass{article}
+\usepackage{graphicx} % Required for inserting images
+\usepackage{booktabs}
+\usepackage{siunitx}
+\newcolumntype{d}{S[
+    input-open-uncertainty=,
+    input-close-uncertainty=,
+    parse-numbers = false,
+    table-align-text-pre=false,
+    table-align-text-post=false
+ ]}
+
+\title{PS11}
+\author{Bradley Rann }
+\date{May 2023}
+
+\begin{document}
+
+\maketitle
+
+\section{Introduction}
+6 - The data is likely either MAR or MNAR because MCAR is extremely unlikely in any data set. There's likely a reason why wages are missing, and from a quick glance it looks like there are more missing wages from non college graduates in the data. So I believe it is likely MNAR.
+
+
+7 - My results on B1 were pretty far off the mark, indicating that the veracity of these 3 imputation methods is pretty weak and other imputation methods might be considered instead.
+
+
+9 - I don't believe that it's very realistic. I think the problem with that model is that union utility decreases because some of the factors that make it more favorable are gone, but I don't think that's a good look at reality. For the people in the union who are already in those roles, utility isn't actually decreasing for them at all.
+
+
+\begin{table}
+\centering
+\begin{tabular}[t]{lc}
+\toprule
+  & (1)\\
+\midrule
+(Intercept) & \num{0.909}\\
+ & (\num{0.116})\\
+hgc & \num{0.056}\\
+ & (\num{0.009})\\
+college1 & \num{-0.091}\\
+ & (\num{0.107})\\
+exper & \num{0.015}\\
+ & (\num{0.006})\\
+married1 & \num{-0.041}\\
+ & (\num{0.036})\\
+kids & \num{0.068}\\
+ & (\num{0.035})\\
+union1 & \num{0.062}\\
+ & (\num{0.073})\\
+\midrule
+Num.Obs. & \num{1545}\\
+R2 & \num{0.035}\\
+R2 Adj. & \num{0.031}\\
+AIC & \num{3189.3}\\
+BIC & \num{3232.0}\\
+Log.Lik. & \num{-1586.626}\\
+F & \num{9.243}\\
+RMSE & \num{0.68}\\
+\bottomrule
+\end{tabular}
+\end{table}
+
+
+\begin{table}
+\centering
+\begin{tabular}[t]{lccc}
+\toprule
+  & Complete Case & Impute with Mean & Heckman Selection\\
+\midrule
+(Intercept) & \num{0.891} & \num{1.202} & \num{0.463}\\
+ & \num{0.891} & \num{1.202} & \num{20.553}\\
+ & (\num{0.112}) & (\num{0.076}) & (\num{0.122})\\
+ & (\num{0.112}) & (\num{0.076}) & (\num{1.111})\\
+hgc & \num{0.058} & \num{0.035} & \num{-1.104}\\
+ & \num{0.058} & \num{0.035} & \num{0.092}\\
+ & (\num{0.009}) & (\num{0.006}) & (\num{0.010})\\
+ & (\num{0.009}) & (\num{0.006}) & (\num{0.066})\\
+union & \num{0.068} &  & \\
+ & (\num{0.073}) &  & \\
+college & \num{-0.079} &  & \\
+ & (\num{0.106}) &  & \\
+exper & \num{0.016} & \num{0.003} & \num{-0.506}\\
+ & \num{0.016} & \num{0.003} & \num{0.038}\\
+ & (\num{0.006}) & (\num{0.004}) & (\num{0.007})\\
+ & (\num{0.006}) & (\num{0.004}) & (\num{0.030})\\
+union1 &  & \num{0.021} & \num{-1.113}\\
+ &  & \num{0.021} & \num{0.112}\\
+ &  & (\num{0.045}) & (\num{0.072})\\
+ &  & (\num{0.045}) & (\num{0.213})\\
+college1 &  & \num{-0.124} & \num{-0.565}\\
+ &  & \num{-0.124} & \num{0.090}\\
+ &  & (\num{0.048}) & (\num{0.100})\\
+ &  & (\num{0.048}) & (\num{0.227})\\
+married1 &  &  & \num{-2.275}\\
+ &  &  & (\num{0.162})\\
+kids &  &  & \num{0.495}\\
+ &  &  & (\num{0.114})\\
+invMillsRatio &  &  & \num{-0.714}\\
+ &  &  & (\num{0.059})\\
+sigma &  &  & \num{0.698}\\
+rho &  &  & \num{-1.022}\\
+\midrule
+Num.Obs. & \num{1545} & \num{2229} & \num{2229}\\
+R2 & \num{0.032} & \num{0.016} & \num{0.090}\\
+R2 Adj. & \num{0.029} & \num{0.014} & \num{0.088}\\
+AIC & \num{3190.2} & \num{3815.6} & \\
+BIC & \num{3222.3} & \num{3849.9} & \\
+Log.Lik. & \num{-1589.113} & \num{-1901.820} & \\
+F & \num{12.600} & \num{9.162} & \\
+RMSE & \num{0.68} & \num{0.57} & \num{0.66}\\
+\bottomrule
+\end{tabular}
+\end{table}
+\end{document}
